@@ -12,10 +12,15 @@ class StatusUpdates extends Component{
 	this.onSubmit = this.onSubmit.bind(this);
 	
 	}
-
+onTextChange(event){
+	event.preventDefault();
+	this.setState({
+		statusUpdates: []
+	})
+}
 
 	onSubmit(event){
-		preventDefault();
+		event.preventDefault();
 
 		let newStatusUpdates = this.state.statusUpdates;
 		newStatusUpdates.push(this.enteredText);
@@ -30,6 +35,10 @@ class StatusUpdates extends Component{
 		//eg
 		// [this.enteredText, ...this.state.statusUpdates];
 
+		
+	}
+	onNewStatus(event){
+		event.preventDefault();
 		this.setState({
 			statusUpdates: newStatusUpdates
 		});
