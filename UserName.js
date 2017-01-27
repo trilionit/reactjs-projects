@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//Introducing More JSX
 
 class UserName extends Component {
 	constructor(){
