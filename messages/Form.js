@@ -5,14 +5,16 @@ class Form extends Component{
 	sendForm(event){
 		event.preventDefault();
 		let tweet = this.textarea.value;
+		this.setState({tweet})
 		this.props.sendTweet(tweet);
-		console.log(this.textarea.value);
+		//console.log(this.textarea.value);
 	}
 
 
 
 	render(){
 		return(
+
 			<div className="bottom">
 				<form onSubmit={this.sendForm.bind(this)}>
 					<textarea ref={(textarea) => this.textarea = textarea}></textarea>
